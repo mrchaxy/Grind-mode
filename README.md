@@ -5,7 +5,6 @@
     <title>Grind Mode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -95,11 +94,6 @@
             50% { box-shadow: 0 0 30px rgba(255,255,255,0.9); }
             100% { box-shadow: 0 0 15px rgba(255,255,255,0.4); }
         }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.1rem; }
-            .typing { font-size: 1.05rem; }
-        }
     </style>
 </head>
 <body>
@@ -126,7 +120,7 @@
     </div>
 
     <script>
-        const text = 
+        const text =
             "I AM CURRENTLY IN GRIND MODE.\n" +
             "TALK TO YOU LATER WHEN I FIND TIME.\n\n" +
             "BUT YOU CAN WATCH MY VIDEOS WHILE YOU WAIT 👇";
@@ -136,8 +130,8 @@
 
         function typeText() {
             if (index < text.length) {
-                typingElement.innerHTML += 
-                    text[index] === "\n" ? "<br>" : text[index];
+                typingElement.innerHTML +=
+                    text[index] === "\\n" ? "<br>" : text[index];
                 index++;
                 setTimeout(typeText, 40);
             }
